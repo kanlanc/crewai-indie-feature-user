@@ -1,0 +1,23 @@
+---
+search_feedback_in_pdfs:
+  description:
+    "Search through the provided PDF documents in the pdf file: {pdf} for any text
+    related to the new feature: {new_feature} that indicates user requests or feedback."
+  expected_output:
+    "A comprehensive report detailing which PDF(s) contained requests
+    or mentions of the new feature: {new_feature}, or a note indicating that no such
+    requests were found."
+  async_execution: false
+  agent: feedback_locator
+compile_feedback_report:
+  description:
+    "Compile the findings from the feedback locator regarding the new feature:
+    {new_feature}, summarizing which PDF(s) contained requests or mentions of the
+    feature."
+  expected_output:
+    A summarized report indicating the PDF(s) where the new feature
+    was requested or stating that no requests were found.
+  async_execution: false
+  agent: feature_coordinator
+  context:
+    - search_feedback_in_pdfs

@@ -1,0 +1,20 @@
+[project]
+name = "feature_feedback_agents"
+version = "0.1.0"
+description = "feature_feedback_agents using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<=3.13"
+dependencies = [
+    "crewai[tools]>=0.79.4,<1.0.0"
+]
+
+[project.scripts]
+feature_feedback_agents = "feature_feedback_agents.main:run"
+run_crew = "feature_feedback_agents.main:run"
+train = "feature_feedback_agents.main:train"
+replay = "feature_feedback_agents.main:replay"
+test = "feature_feedback_agents.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

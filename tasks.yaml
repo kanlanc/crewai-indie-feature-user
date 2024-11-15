@@ -1,0 +1,13 @@
+extraction_task:
+  description: >
+    Extract text from all PDF resumes in the directory {directory_path}.
+  expected_output: >
+    A complete text extraction from each PDF file.
+  agent: extraction_specialist
+
+compilation_task:
+  description: >
+    Compile the extracted text into a structured format suitable for a master resume.
+  expected_output: >
+    A draft of the master resume containing all relevant information organized logically formatted as Markdown.
+  agent: compilation_expert
